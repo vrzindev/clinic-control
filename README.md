@@ -5,7 +5,7 @@
 [![Tomcat](https://img.shields.io/badge/Tomcat-9.0+-red)](https://tomcat.apache.org/)
 [![Web](https://img.shields.io/badge/Web-HTML%2FJS%2FCSS-green)](https://www.w3.org/)
 
-> 🌎 **This project is also available in [Portuguese](/clinic-control/README-pt.md).**
+> 🌎 **This project is also available in [Portuguese](README-pt.md).**
 
 
 This project was developed as part of the **Integrative Project** at the end of the 2nd semester of the **Systems Analysis and Development (ADS)** undergraduate course. The goal of the project was to create a **web** system for managing information about **doctors**, **patients**, and **medical appointments**, using the technologies **JSP**, **MySQL**, **Tomcat**, and **Web**.
