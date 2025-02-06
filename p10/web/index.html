@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro - Clínica</title>
+    <style>
+        /* Estilo geral do corpo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Wrapper para centralizar os formulários */
+        .form-wrapper {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Títulos */
+        .form-wrapper h1 {
+            color: #00796B;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo dos rótulos */
+        .form-wrapper label {
+            color: #00796B;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        /* Campos de entrada */
+        .form-wrapper input[type="email"],
+        .form-wrapper input[type="password"],
+        .form-wrapper input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        /* Botões */
+        .form-wrapper button {
+            background-color: #00796B;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Efeito hover para botões */
+        .form-wrapper button:hover {
+            background-color: #005f56;
+        }
+
+        /* Linha horizontal */
+        .form-wrapper hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Ajustes de responsividade */
+        @media (max-width: 500px) {
+            .form-wrapper {
+                padding: 15px;
+            }
+
+            .form-wrapper h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-wrapper">
+        <h1>Login</h1>
+        <form method="post" action="login.jsp">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="senha" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <hr>
+        <h1>Cadastro</h1>
+        <form method="post" action="cadastro.jsp">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="email-register">E-mail:</label>
+            <input type="email" id="email-register" name="email" placeholder="Digite seu e-mail" required>
+
+            <label for="password-register">Senha:</label>
+            <input type="password" id="password-register" name="senha" placeholder="Crie uma senha" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>

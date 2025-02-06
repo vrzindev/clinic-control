@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opções Médico</title>
+    <link rel="stylesheet" href="style2.css"/>
+    
+    <script>
+        function mostrarCampos() {
+            var opcao = document.querySelector('input[name="opcao"]:checked').value;
+            document.getElementById("cadastrarCampos").style.display = "none";
+            document.getElementById("consultarCampos").style.display = "none";
+            document.getElementById("excluirCampos").style.display = "none";
+
+            // Exibe os campos dependendo da opção selecionada
+            if (opcao == "cadastrar") {
+                document.getElementById("cadastrarCampos").style.display = "block";
+                document.getElementById("formulario").action = "cadmedico.jsp";
+            } else if (opcao == "consultar") {
+                document.getElementById("consultarCampos").style.display = "block";
+                document.getElementById("formulario").action = "consulmedico.jsp";
+            } else if (opcao == "excluir") {
+                document.getElementById("excluirCampos").style.display = "block";
+                document.getElementById("formulario").action = "exmedico.jsp";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="firsth1">MÉDICO - OPÇÕES</h1>
+    </header>
+
+    <main>
+        <form id="formulario" method="POST">
+            <label for="opcao">Escolha uma opção para o Médico:</label><br><br>
+            
+            <input type="radio" id="cadastrar" name="opcao" value="cadastrar" onclick="mostrarCampos()">
+            <label for="cadastrar">Cadastrar Médico</label><br><br>
+            
+            <input type="radio" id="consultar" name="opcao" value="consultar" onclick="mostrarCampos()">
+            <label for="consultar">Consultar Médico</label><br><br>
+
+            <input type="radio" id="excluir" name="opcao" value="excluir" onclick="mostrarCampos()">
+            <label for="excluir">Excluir Médico</label><br><br>
+
+            <!-- Campos de Cadastro -->
+            <div id="cadastrarCampos" style="display:none;">
+                <label for="crm">CRM:</label>
+                <input type="text" id="crm" name="crm"><br><br>
+                
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"><br><br>
+                
+                <label for="especialidade">Especialidade:</label>
+                <input type="text" id="especialidade" name="especialidade"><br><br>
+            </div>
+
+            <!-- Campos de Consulta -->
+            <div id="consultarCampos" style="display:none;">
+                <label for="crmConsultar">CRM:</label>
+                <input type="text" id="crmConsultar" name="crmConsultar"><br><br>
+            </div>
+
+            <!-- Campos de Exclusão -->
+            <div id="excluirCampos" style="display:none;">
+                <label for="crmExcluir">CRM:</label>
+                <input type="text" id="crmExcluir" name="crmExcluir"><br><br>
+            </div>
+
+   <button type="submit" class="button">Confirmar</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opções Paciente</title>
+    <link rel="stylesheet" href="style2.css"/>
+    
+    <script>
+        // Função para exibir os campos com base na opção selecionada
+        function mostrarCampos() {
+            var opcao = document.querySelector('input[name="opcao"]:checked').value;
+            document.getElementById("cadastrarCampos").style.display = "none";
+            document.getElementById("consultarCampos").style.display = "none";
+            document.getElementById("excluirCampos").style.display = "none";
+
+            if (opcao === "cadastrar") {
+                document.getElementById("cadastrarCampos").style.display = "block";
+                document.getElementById("formulario").action = "cadpaciente.jsp";
+            } else if (opcao === "consultar") {
+                document.getElementById("consultarCampos").style.display = "block";
+                document.getElementById("formulario").action = "consulpaciente.jsp";
+            } else if (opcao === "excluir") {
+                document.getElementById("excluirCampos").style.display = "block";
+                document.getElementById("formulario").action = "expaciente.jsp";
+            }
+        }
+
+        // Função para aplicar a máscara no campo CPF
+        function mascaraCPF(cpf) {
+            cpf = cpf.replace(/\D/g, ''); // Remove caracteres não numéricos
+            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona ponto após os 3 primeiros números
+            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona ponto após os 6 primeiros números
+            cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona hífen antes dos 2 últimos números
+            return cpf;
+        }
+
+        function aplicarMascara(campo) {
+            campo.value = mascaraCPF(campo.value);
+        }
+    </script>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="firsth1">PACIENTE - OPÇÕES</h1>
+    </header>
+
+    <main>
+        <form id="formulario" method="POST">
+            <label for="opcao">Escolha uma opção para o Paciente:</label><br><br>
+            
+            <input type="radio" id="cadastrar" name="opcao" value="cadastrar" onclick="mostrarCampos()">
+            <label for="cadastrar">Cadastrar Paciente</label><br><br>
+            
+            <input type="radio" id="consultar" name="opcao" value="consultar" onclick="mostrarCampos()">
+            <label for="consultar">Consultar Paciente</label><br><br>
+
+            <input type="radio" id="excluir" name="opcao" value="excluir" onclick="mostrarCampos()">
+            <label for="excluir">Excluir Paciente</label><br><br>
+
+            <!-- Campos de Cadastro -->
+            <div id="cadastrarCampos" style="display:none;">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" oninput="aplicarMascara(this)" maxlength="14"><br><br>
+                
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone"><br><br>
+            </div>
+
+            <!-- Campos de Consulta -->
+            <div id="consultarCampos" style="display:none;">
+                <label for="cpfConsultar">CPF:</label>
+                <input type="text" id="cpfConsultar" name="cpfConsultar" oninput="aplicarMascara(this)" maxlength="14"><br><br>
+            </div>
+
+            <!-- Campos de Exclusão -->
+            <div id="excluirCampos" style="display:none;">
+                <label for="cpfExcluir">CPF:</label>
+                <input type="text" id="cpfExcluir" name="cpfExcluir" oninput="aplicarMascara(this)" maxlength="14"><br><br>
+            </div>
+
+            <button type="submit">Confirmar</button>
+        </form>
+    </main>
+
+</body>
+
+</html>
