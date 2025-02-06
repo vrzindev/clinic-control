@@ -64,6 +64,8 @@ Este projeto foi desenvolvido com o objetivo de **aplicar e aprender** conceitos
 ![LOGIN](ImgsProject/login.png)
 ![BEGIN](ImgsProject/beginning.png)
 ![DOCTOR](ImgsProject/doctor.png) 
+![PATIENT](ImgsProject/patient.png)
+![CONSUL](ImgsProject/consultation.png)
 
 ---
 
