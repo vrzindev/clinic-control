@@ -43,7 +43,7 @@ Este projeto foi desenvolvido com o objetivo de **aplicar e aprender** conceitos
 
 1. **Clone o repositório**:
     ```bash
-    git clone https://github.com/usuario/projeto-integrador-clinica.git
+    git clone https://github.com/vrzindev/clinic-control.git
     ```
 
 2. **Configuração do Banco de Dados**:
@@ -79,12 +79,6 @@ Adicione capturas de tela do seu sistema em funcionamento para dar aos visitante
 - **Implementar a funcionalidade de alteração de registros** (ainda não implementada no projeto).
 - Melhorar a interface com **design responsivo**.
 - Adicionar **autenticação de usuário** para controle de acesso ao sistema.
-
----
-
-### 🔗 Links Úteis
-
-- [Link para o repositório](https://github.com/usuario/projeto-integrador-clinica.git)
 
 ---
 
