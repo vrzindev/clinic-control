@@ -78,7 +78,6 @@ Adicione capturas de tela do seu sistema em funcionamento para dar aos visitante
 
 - **Implementar a funcionalidade de alteração de registros** (ainda não implementada no projeto).
 - Melhorar a interface com **design responsivo**.
-- Adicionar **autenticação de usuário** para controle de acesso ao sistema.
 
 ---
 
