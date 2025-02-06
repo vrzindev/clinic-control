@@ -61,7 +61,7 @@ Este projeto foi desenvolvido com o objetivo de **aplicar e aprender** conceitos
 
 ### 📸 Screenshots
 
-![](ImgsProject/login.png)
+![LOGIN](ImgsProject/login.png)
 ---
 
 ### 🚀 Tecnologias Utilizadas
