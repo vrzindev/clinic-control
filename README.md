@@ -1,61 +1,69 @@
-# 🏥 Sistema de Gerenciamento de Clínica Médica
+# 🏥 Clinic Management System
 
-Este projeto foi desenvolvido como parte do **Projeto Integrador** no final do 2º semestre da graduação em **Análise e Desenvolvimento de Sistemas (ADS)**. O objetivo do projeto foi criar um sistema **web** para o controle e gerenciamento de informações de **médicos**, **pacientes** e **consultas médicas**, utilizando as tecnologias **JSP**, **MySQL**, **Tomcat** e **Web**.
+[![JSP](https://img.shields.io/badge/JSP-2.3-blue)](https://javaee.github.io/javaee-spec/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0+-blue)](https://www.mysql.com/)
+[![Tomcat](https://img.shields.io/badge/Tomcat-9.0+-red)](https://tomcat.apache.org/)
+[![Web](https://img.shields.io/badge/Web-HTML%2FJS%2FCSS-green)](https://www.w3.org/)
 
-### 🌟 Objetivo
+> 🌎 **This project is also available in [Portuguese](/clinic-control/README-pt.md).**
 
-Facilitar o gerenciamento de uma clínica médica com funcionalidades para cadastrar, consultar e excluir registros de médicos, pacientes e consultas de forma prática e eficiente. O sistema mantém a integridade dos dados, interligando informações através de chaves como CRM e CPF.
 
----
+This project was developed as part of the **Integrative Project** at the end of the 2nd semester of the **Systems Analysis and Development (ADS)** undergraduate course. The goal of the project was to create a **web** system for managing information about **doctors**, **patients**, and **medical appointments**, using the technologies **JSP**, **MySQL**, **Tomcat**, and **Web**.
 
-### 🔑 Funcionalidades
+### 🌟 Objective
 
-- **Cadastro de Médico**: Registra médicos com informações como **CRM**, **nome** e **especialidade**.
-- **Cadastro de Paciente**: Registra pacientes com **CPF**, **nome** e **contato**.
-- **Cadastro de Consulta**: Registra consultas médicas, associando um **médico** a um **paciente**, com **data** e **hora** específicas.
-- **Consulta e Exclusão**: Permite a busca e remoção de médicos, pacientes e consultas usando filtros como **CRM** e **CPF**.
-
----
-
-### 📊 Como Funciona
-
-O sistema é dividido em três módulos principais, que permitem a **interação entre médicos, pacientes e consultas** de forma fácil e intuitiva:
-
-1. **Médico**: Cadastro, consulta e exclusão de médicos.
-2. **Paciente**: Cadastro, consulta e exclusão de pacientes.
-3. **Consulta**: Cadastro, consulta e exclusão de consultas médicas, vinculando médicos e pacientes.
-
-A integridade dos dados é garantida por chaves de relacionamento, como **CRM** para médicos e **CPF** para pacientes.
+To facilitate the management of a medical clinic with features to register, query, and delete records of doctors, patients, and appointments efficiently. The system maintains data integrity by interlinking information using keys such as CRM and CPF.
 
 ---
 
-### 👨‍💻 Equipe de Desenvolvimento
+### 🔑 Features
 
-**Desenvolvido por**: **Vitor Vieira Santos Ramos**
-
-Este projeto foi desenvolvido com o objetivo de **aplicar e aprender** conceitos de **desenvolvimento web**, **integração com banco de dados** e **JSP**, além de proporcionar uma **experiência prática no desenvolvimento de sistemas para gestão de clínicas médicas**.
-
-**Nota**: Recebido **9,5** pela falta da funcionalidade de **alteração** de registros.
+- **Doctor Registration**: Registers doctors with information like **CRM**, **name**, and **specialty**.
+- **Patient Registration**: Registers patients with **CPF**, **name**, and **contact**.
+- **Appointment Registration**: Registers medical appointments, linking a **doctor** to a **patient**, with specific **date** and **time**.
+- **Query and Delete**: Allows searching and removal of doctors, patients, and appointments using filters like **CRM** and **CPF**.
 
 ---
 
-### ⚙️ Como Rodar o Projeto
+### 📊 How It Works
 
-1. **Clone o repositório**:
+The system is divided into three main modules that allow **interaction between doctors, patients, and appointments** in an easy and intuitive way:
+
+1. **Doctor**: Register, query, and delete doctors.
+2. **Patient**: Register, query, and delete patients.
+3. **Appointment**: Register, query, and delete medical appointments, linking doctors and patients.
+
+Data integrity is guaranteed through relationship keys such as **CRM** for doctors and **CPF** for patients.
+
+---
+
+### 👨‍💻 Development Team
+
+**Developed by**: **Vitor Vieira Santos Ramos**
+
+This project was developed with the goal of **applying and learning** web development concepts, **database integration**, and **JSP**, as well as providing **hands-on experience in developing systems for clinic management**.
+
+**Note**: Received a **9.5** grade due to the absence of the **record modification** functionality.
+
+---
+
+### ⚙️ How to Run the Project
+
+1. **Clone the repository**:
     ```bash
     git clone https://github.com/vrzindev/clinic-control.git
     ```
 
-2. **Configuração do Banco de Dados**:
-    - Crie o banco de dados MySQL e as tabelas necessárias para o funcionamento do sistema.
-    - Importante: Verifique se os dados de **conexão com o banco de dados** estão corretos no arquivo de configuração.
+2. **Set up the Database**:
+    - Create the MySQL database and necessary tables for the system to work.
+    - Important: Verify if the **database connection details** are correct in the configuration file.
 
-3. **Implemente o Projeto no Tomcat**:
-    - Importe o projeto em sua IDE favorita (Eclipse, IntelliJ).
-    - Configure o servidor **Tomcat** para rodar a aplicação.
+3. **Deploy the Project on Tomcat**:
+    - Import the project into your preferred IDE (Eclipse, IntelliJ).
+    - Set up the **Tomcat server** to run the application.
 
-4. **Acesse a aplicação**:
-    - Após a configuração, basta rodar o servidor Tomcat e acessar o sistema pelo navegador.
+4. **Access the Application**:
+    - Once configured, simply run the Tomcat server and access the system through your browser.
 
 ---
 
@@ -69,26 +77,32 @@ Este projeto foi desenvolvido com o objetivo de **aplicar e aprender** conceitos
 
 ---
 
-### 🚀 Tecnologias Utilizadas
+### 🚀 Technologies Used
 
-- **JSP (JavaServer Pages)**: Para criação da interface web dinâmica.
-- **MySQL**: Banco de dados para armazenar as informações de médicos, pacientes e consultas.
-- **Tomcat**: Servidor de aplicação utilizado para rodar o sistema.
-- **HTML/CSS**: Para construção da interface de usuário e estilização.
+- **JSP (JavaServer Pages)**: For creating the dynamic web interface.
+- **MySQL**: Database for storing doctors, patients, and appointments information.
+- **Tomcat**: Application server used to run the system.
+- **HTML/CSS**: For building the user interface and styling.
 
 ---
 
-### 📍 Próximos Passos
+### 📍 Next Steps
 
-- **Implementar a funcionalidade de alteração de registros** (ainda não implementada no projeto).
-- Melhorar a interface com **design responsivo**.
+- **Implement the functionality to modify records** (still not implemented in the project).
+- Improve the interface with a **responsive design**.
 
 ---
 
 ### 💬 Feedback
 
-Sinta-se à vontade para abrir **issues** ou **pull requests** para sugestões, melhorias ou correções.
+Feel free to open **issues** or **pull requests** for suggestions, improvements, or fixes.
 
 ---
 
-**Agradeço pela visita ao repositório!**
+### 📝 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+**Thank you for visiting the repository!**
